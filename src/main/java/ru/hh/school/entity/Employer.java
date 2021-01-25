@@ -25,7 +25,7 @@ public class Employer {
   private LocalDateTime creationTime;
 
   @OneToMany(mappedBy="employer")
-  @Cascade(org.hibernate.annotations.CascadeType.SAVE_UPDATE)
+  @Cascade(org.hibernate.annotations.CascadeType.ALL)
   private List<Vacancy> vacancies = new ArrayList<>();
 
   @Column(name = "block_time")
